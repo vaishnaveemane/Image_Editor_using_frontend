@@ -1,0 +1,71 @@
+<!-- Updated minimal luxury editor with new background and dynamic canvas visibility -->
+<!-- Full HTML with embedded CSS/JS for single-file simplicity -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Advanced Image Editor</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="editor">
+
+  <div class="header">
+    <h1 class="title">Image Editor</h1>
+    <label class="upload-btn">Upload Image
+      <input type="file" id="upload" accept="image/*">
+    </label>
+  </div>
+
+  <div class="main">
+
+    <div class="tools">
+
+      <div class="card">
+        <h3>Filters</h3>
+        <label>Brightness</label><input type="range" id="brightness" min="0" max="200" value="100">
+        <label>Contrast</label><input type="range" id="contrast" min="0" max="200" value="100">
+        <label>Saturation</label><input type="range" id="saturate" min="0" max="200" value="100">
+        <label>Blur</label><input type="range" id="blur" min="0" max="10" value="0">
+        <label>Invert</label><input type="range" id="invert" min="0" max="100" value="0">
+      </div>
+
+      <div class="card">
+        <h3>Transform</h3>
+        <label>Rotate</label><input type="range" id="rotate" min="0" max="360" value="0">
+        <button class="btn" id="flipH">Flip Horizontal</button>
+        <button class="btn" id="flipV">Flip Vertical</button>
+        <button class="btn" id="zoomIn">Zoom In</button>
+        <button class="btn" id="zoomOut">Zoom Out</button>
+      </div>
+
+      <div class="card">
+        <h3>Text & Stickers</h3>
+        <input type="text" id="textInput" placeholder="Enter text">
+        <button class="btn" id="addText">Add Text</button>
+        <button class="btn" id="addHeart">❤️ Heart</button>
+        <button class="btn" id="addStar">⭐ Star</button>
+      </div>
+
+      <div class="card">
+        <h3>Crop</h3>
+        <button class="btn" id="startCrop">Start Crop</button>
+        <button class="btn" id="reset">Reset</button>
+        <button class="btn" id="download">Download</button>
+      </div>
+
+    </div>
+
+    <div class="canvas-area">
+      <p id="emptyMsg">Upload an image to start editing.</p>
+      <canvas id="canvas"></canvas>
+    </div>
+
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
